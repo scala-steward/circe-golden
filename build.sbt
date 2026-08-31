@@ -12,7 +12,7 @@ ThisBuild / crossScalaVersions := Seq(scala212, scala213, scala3)
 val circeVersion = "0.14.16"
 val scalacheckVersion = "1.20.0"
 val disciplineScalatestVersion = "2.3.0"
-val scalacheckScalaTestVersion = "3.2.19.0"
+val scalacheckScalaTestVersion = "3.2.20.0"
 
 val root = tlCrossRootProject.aggregate(golden, example1)
 
@@ -22,7 +22,7 @@ lazy val golden = crossProject(JVMPlatform)
   .settings(
     moduleName := "circe-golden",
     libraryDependencies ++= Seq(
-      "org.scalatestplus" %%% "scalacheck-1-18" % scalacheckScalaTestVersion,
+      "org.scalatestplus" %%% "scalacheck-1-19" % scalacheckScalaTestVersion,
       "io.circe" %%% "circe-core" % circeVersion,
       "io.circe" %%% "circe-parser" % circeVersion,
       "io.circe" %%% "circe-testing" % circeVersion,
